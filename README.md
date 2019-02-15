@@ -50,7 +50,7 @@ void loop(){
 
 }
 ```
-*int analog(ch) This function will return analog value resolution 10 bits
+* int analog(ch) This function will return analog value resolution 10 bits
 ```C++
 #include "IKB1.h"
 
