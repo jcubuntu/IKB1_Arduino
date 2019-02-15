@@ -6,9 +6,22 @@ The package adds support for the [iKB-1](https://inex.co.th/shop/ikb-1-board.htm
 
 ## !Caution do not use iKB-1 with i-BIT board the I2C Address is same ADC IC on i-BIT board  (0x48)
 
-IKB1 Arduino Lib
+###IKB1 Arduino Library function
 
-![iKB-1](https://raw.githubusercontent.com/jcubuntu/IKB1_Arduino/master/Function.png)
+* reset() This function for reset IKB-1
+```C++
+reset();
+```
+
+* servo(ch, angle) This function for control servo ch is port on IKB1
+```C++
+servo(10,100); // Set servo on port 10 to 100 degree
+```
+* motor(ch, power) This function for control dc motor driver on IKB1
+```C++
+motor(1,100); // Set motor 1 to forawrd power 100%
+```
+
 
 
 ### Examaple for use Lib
