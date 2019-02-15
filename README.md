@@ -10,19 +10,62 @@ The package adds support for the [iKB-1](https://inex.co.th/shop/ikb-1-board.htm
 
 * reset() This function for reset IKB-1
 ```C++
-reset();
+#include "IKB1.h"
+
+IKB1 ikb1;
+
+void setup() {
+  ikb1.reset();
+}
+void loop(){
+
+}
 ```
 
 * servo(ch, angle) This function for control servo ch is port on IKB1
 ```C++
-servo(10,100); // Set servo on port 10 to 100 degree
+#include "IKB1.h"
+
+IKB1 ikb1;
+
+void setup() {
+  ikb1.servo(10,100); // Set servo on port 10 to 100 degree
+}
+void loop(){
+
+}
 ```
-* motor(ch, power) This function for control dc motor driver on IKB1
+* motor(ch, power) This function for control dc motor (ch chanle on board)
+* motor_stop(ch) This function for stop dc motor (ch chanle on board)
 ```C++
-motor(1,100); // Set motor 1 to forawrd power 100%
+#include "IKB1.h"
+
+IKB1 ikb1;
+
+void setup() {
+  motor(1,100); // Set motor 1 to forawrd power 100%
+  motor_stop(1); // Stop motor 1 
+}
+void loop(){
+
+}
 ```
+*int analog(ch) This function will return analog value resolution 10 bits
+```C++
+#include "IKB1.h"
 
+IKB1 ikb1;
 
+void setup() {
+  Serial.begin(9600); 
+}
+void loop(){
+  int readValue = 0;
+  readValue = ikb1.analog(0); // Read analog value form A0 on iKB1 board
+  Serial.println(readValue);
+  delay(500);
+}
+```
 
 ### Examaple for use Lib
 
