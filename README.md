@@ -5,16 +5,16 @@ IKB1 Arduino Lib
 ![iKB-1](https://raw.githubusercontent.com/jcubuntu/IKB1_Arduino/master/Function.png)
 
 
-### Eamaple for use Lib
+### Examaple for use Lib
 
 * Create object 
-```blocks
+```C++
 IKB1 ikb1;
 ```
 
 * Simple use control motor
 
-```blocks
+```C++
 #include "IKB1.h"
 
 IKB1 ikb1;
